@@ -18,9 +18,19 @@ npm test
 (requires jest: npm i -g jest)
 */
 
-function openDoor(input) {
+
+function openDoor(people) {
+
 	// Your code here
+	for (let i=0; i < people.length; i++) {
+		if (people[i].name.toLowerCase() === 'simon' && people[i].hasCoffee === true)
+		return true;
+		
+	}
+	return false;
 }
 module.exports = {
-	openDoor
+	openDoor	
+	
 }
+
