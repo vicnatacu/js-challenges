@@ -18,13 +18,16 @@ npm test
 (requires jest: npm i -g jest)
 */
 
-
+//Input is an array of of objexts, where each object as two properties:
+//name: string
+//hasCoffe: boolean
 function openDoor(people) {
 
 	// Your code here
 	for (let i=0; i < people.length; i++) {
-		if (people[i].name.toLowerCase() === 'simon' && people[i].hasCoffee === true)
+		if (people[i].name.toLowerCase() === 'simon' && people[i].hasCoffee === true)  {
 		return true;
+		}
 		
 	}
 	return false;
