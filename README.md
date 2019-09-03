@@ -20,3 +20,7 @@
 * 02_largestNumber
 * 03_openDoor
 * 04_objects
+<<<<<<< HEAD
+=======
+* 05_sumNumbers
+>>>>>>> upstream/05_sumNumbers
