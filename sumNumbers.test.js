@@ -5,6 +5,15 @@ class Player {
         this.name = name
         this.scores = scores
     }
+    
+}
+//Added a prototype function to calculate totalScores for players.
+Player.prototype.totalScores = function() {
+    let totalScore = 0;
+    for(let score of this.scores) {
+        totalScore += score;
+    }
+    return totalScore;
 }
 
 let players = []
