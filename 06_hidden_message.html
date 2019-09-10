@@ -42,7 +42,6 @@
   <body>
     <div id="hidden-message">This is our hidden message!</div>
     <button id="button-show"onclick = "buttonShow.onclick()">Show secret message</button>
-    <button id="button-hide"onclick = "buttonHide.onclick()">Hide Message</button>
   </body>
 
   <script>
@@ -51,21 +50,23 @@
   
   // Get the element #button-show and assign it to buttonShow variable
   const buttonShow = document.querySelector('#button-show')
-  const buttonHide = document.querySelector('#button-hide')
-
+  
   // Listen for a buttonShow click
   buttonShow.onclick = function () {
     // buttonShow has been clicked, show the hidden message.
-    hiddenMessage.style.display = 'block';
-    buttonShow.style.display = 'none';
-    buttonHide.style.display = 'block'
+   if(buttonShow.innerText === "Show secret message") {
+        hiddenMessage.style.display = 'block';
+        buttonShow.innerText = "Hide secret message";
+   } else {
+        buttonShow.innerText = "Show secret message";
+        hiddenMessage.style.display = "none";
+   }
+    // 
+    // buttonShow.style.display = 'none';
+    // buttonHide.style.display = 'block'
   }
 
-  buttonHide.onclick = function() {
-    hiddenMessage.style.display = 'none';
-    buttonShow.style.display = 'block';
-    buttonHide.style.show = 'none';
-  }
+  
   </script>
 
 </html>
