@@ -3,41 +3,61 @@
   Your challenge is to:
   1. CSS: Give the page a touch of styling. Add some padding to the input box.
   2. JS:
-     a) If the user deletes their name, 'Welcome, ' is still shown. Fix this.
-     b) Make the user's name show in uppercase.
+  a) If the user deletes their name, 'Welcome, ' is still shown. Fix this.
+  b) Make the user's name show in uppercase.
   Hints:
   - Just like Ruby, you can check name.value doesn't equal "".
   - JS has a helper method for uppercase.
   Beast mode:
   1. Add another input box, ask for firstname lastname
- -->
+-->
 <!doctype html>
 <html>
-  <head>
-    <title>Welcome</title>
-
-    <style>
+<head>
+  <title>Welcome</title>
+  
+  <style>
     body {
       text-align: center;
     }
-    </style>
-  </head>
+  </style>
+</head>
 
-  <body>
+<body>
+  
+  <p><input id='name'class='change-name' type="text" placeholder="Enter your  first name"></p>
+  <p><input id='last-name'class='change-name'type="text" placeholder="Enter your  last name"></p>
+  
+  <h1></h1>
+  
+</body>
 
-    <p><input type="text" placeholder="Enter your name"></p>
+<script>
+  const name = document.querySelector('#name');
+  const lastName = document.querySelector('#last-name');
+  console.log(lastName);
+  let wholeName = "";
+  
 
-    <h1></h1>
-
-  </body>
-
-  <script>
-  const name = document.querySelector('input')
   const welcomeMessage = document.querySelector('h1')
-  name.onkeyup = function () {
-    // hint: name.value gives you the current text in the input box
-    welcomeMessage.textContent = `Welcome, ${name.value}!`;
+  let newStyleTag = document.createElement("style");
+  document.body.appendChild(newStyleTag);
+  newStyleTag.innerHTML = "\ninput {\npadding: 10px;\n}";
+  function changeName () {
+    if ((name.value + ' '+ lastName.value).length === 0) {
+      welcomeMessage.textContent = ' ';
+    } else {
+      wholeName = (name.value + ' '+ lastName.value).trim();
+      welcomeMessage.textContent = `Welcome, ${wholeName.toUpperCase()}`
+    }
   }
-  </script>
+  let nameFields = document.getElementsByClassName('change-name')
+  for (e of nameFields) {
+    e.onkeyup = changeName; 
+    // hint: name.value gives you the current text in the input box
+  }
+  
+  
+</script>
 
 </html>
