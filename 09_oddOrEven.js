@@ -9,7 +9,26 @@ If the input array is empty consider it as: [0] (array with a zero).
 */
 
 function oddOrEven(array) {
+    let sum = 0;
     //enter code here
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+
+    if (array.length === 0) {
+        return 'even';
+
+    } else if (sum % 2 === 0) {
+        return 'even';
+        
+
+    } else {
+        return 'odd';
+    }
 }
+
+
+
+
 
 module.exports = {oddOrEven};
