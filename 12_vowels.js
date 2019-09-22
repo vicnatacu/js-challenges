@@ -14,7 +14,19 @@ npm test
 
 function vowels(string) {
     // Your code here
+        // return (string.match(/[aeiou]/ig)||[]);
+        // console.log(string);  
+        let array = string.split('');
+        let vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+        let result = [];
+        for(let i = 0; i < array.length; i++) {
+            if(vowels.includes(array[i])) {
+                result.push(array[i])
+           }
+        }
+        return result;
 }
+console.log(vowels('The happy happy Hippo'))
 
 module.exports = {
     vowels
