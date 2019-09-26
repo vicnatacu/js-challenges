@@ -28,12 +28,28 @@ the last customer at till2 is served.
 
 Check your solutions with npm test
 */
-
+function addtoSmallestCustomerLines(queues, customer) {
+    let smallest = 0;
+    let shortest = queues[smallest] + customer;
+    for (let i = 1; i < queues.length; i++) {
+        if (queues[i] + customer < shortest) {
+            smallest = i;
+            shortest = queues[smallest] + customer;
+        }
+    }
+    queues[smallest] += customer
+}
 
 // Returns the queue time for all customers given number of tills
 function queueTime(customers, n) {
-    // Your code here
+    let queues = new Array(n).fill(0);
+    for (let customer of customers) {
+        addtoSmallestCustomerLines(queues, customer)
+    }
+   return queues.reduce((a,b)=> a > b ? a : b); 
 }
+
+
 
 module.exports = {
     queueTime
