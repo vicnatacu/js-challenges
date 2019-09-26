@@ -28,3 +28,4 @@
 * 10_numberPersistence
 * 12_vowels
 * 13_dijkstra_algorithm
+* 14_supermarket
