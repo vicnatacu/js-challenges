@@ -1,4 +1,4 @@
-const isPangram = require('./20_pangram').isPangram;
+const isPangram = require('./17_pangram').isPangram;
 
 describe('Pangram Challenge', function () {
   it('The phrase "the quick brown fox jumps over the lazy dog" should return true', function () {
