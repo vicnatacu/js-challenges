@@ -19,7 +19,14 @@ _.findLastIndex(users, {
 */
 
 const findLastIndex = (array, needle) => {
-	// Your code here
+  let key = Object.keys(needle)[0]
+  let value = Object.values(needle)[0]
+  for (let i = array.length - 1; i >= 0; i--) {
+    if (Object.keys(array[i]).includes(key) &&
+      Object.values(array[i]).includes(value))
+      return i;
+  }
+  return -1;
 }
 
 module.exports = {
