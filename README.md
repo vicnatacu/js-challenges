@@ -32,3 +32,4 @@
 * 15_node
 * 16_countEvens
 * 17_pangram
+* 18_lastIndex
