@@ -33,3 +33,4 @@
 * 16_countEvens
 * 17_pangram
 * 18_lastIndex
+* 19_uniqueString
