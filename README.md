@@ -34,3 +34,4 @@
 * 17_pangram
 * 18_lastIndex
 * 19_uniqueString
+* 20_commonCharacters
