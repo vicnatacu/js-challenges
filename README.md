@@ -35,3 +35,4 @@
 * 18_lastIndex
 * 19_uniqueString
 * 20_commonCharacters
+* 21_equalValues
