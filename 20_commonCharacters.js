@@ -10,10 +10,18 @@ commonCharacters("Alright alright alright", "") => ""
 
 */
 
-const commonCharacters = (string1, string2) => {
-    //    Your code here
-
-}
+function commonCharacters(string1, string2) {
+    // Your code here
+   let outcome = ""
+   for(let i of string1.replace(/ /g, "")) {
+       if (string2.includes(i) && !outcome.includes(i)) {
+           outcome += i;
+       }
+   }
+   return outcome;
+  
+} 
+console.log(commonCharacters('Riding on a buffalo makes me more approachable', 'so what'));
 
 module.exports = {
     commonCharacters
