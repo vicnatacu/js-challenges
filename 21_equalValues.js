@@ -14,9 +14,9 @@ Examples:
 */
 
 const equalValues = (value1, value2) => {
-
-
     // Your code below
+
+    
 }
 
 module.exports = {
